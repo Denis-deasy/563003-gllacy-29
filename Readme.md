@@ -1,7 +1,7 @@
 # Личный проект «Глейси»
 
 * Студент: [Денис Ткаченко](https://up.htmlacademy.ru/htmlcss/29/user/563003).
-* Наставник: 'Дмитрий Мирошниченко https://htmlacademy.ru/profile/id591417'.
+* Наставник: [Дмитрий Мирошниченко](https://htmlacademy.ru/profile/id591417).
 
 ---
 
