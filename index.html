@@ -39,8 +39,8 @@
         <!--Корзина-->
       </ul>
     </header>
-    <main class="container container-center">
-      <section class="slider">
+    <main class="container">
+      <section class="slider container-center">
         <!--Слайдер-->
         <div class="breadcrumbs-info">
           <p class="slider-info">c 10 до 20, ежедневно</p>
@@ -48,44 +48,44 @@
         </div>
         <ul class="slider-list">
           <li class="slider-item">
-            <img class="slider-img1" src="img/ice-cream1.png" width="372" height="584" alt="Крем-брюле">
-            <img class="slider-img2" src="img/ice-cream2.png" width="333" height="519" alt="Пломбир с малиновым джемом">
+            <img class="slider-img" src="img/ice-cream1.png" width="716" height="716"
+              alt="Два рожка мороженого крем-брюле и пломбир с малиновым джемом">
             <p class="slider-desc">Крем-брюле и пломбир
               с малиновым джемом</p>
             <a class="button slider-button" href="#">Давайте оба!</a>
           </li>
           <li class="slider-item">
-            <img class="slider-img3" src="img/ice-cream3.png" width="375" height="582" alt="Шоколадный пломбир">
-            <img class="slider-img4" src="img/ice-cream4.png" width="338" height="523" alt="Лимонный сорбет">
+            <img class="slider-img" src="img/ice-cream2.png" width="716" height="716"
+              alt="Два рожка мороженого шоколадный пломбир и лимонный сорбет">
             <p class="slider-desc">Шоколадный пломбир
               и лимонный сорбет</p>
             <a class="button slider-button" href="#">Давайте оба!</a>
           </li>
           <li class="slider-item">
-            <img class="slider-img5" src="img/ice-cream5.png" width="367" height="582" alt="Пломбир с помадкой">
-            <img class="slider-img6" src="img/ice-cream6.png" width="326" height="523" alt="Клубличный щербет">
+            <img class="slider-img" src="img/ice-cream3.png" width="716" height="716"
+              alt="Два рожка мороженого пломбир с помадкой и клубличный щербет">
             <p class="slider-desc">Пломбир с помадкой
               и клубничный щербет</p>
             <a class="button slider-button" href="#">Давайте оба!</a>
           </li>
         </ul>
       </section>
-      <section class="offer">
+      <section class="offer container-center">
         <!--Предложения опт-->
         <article class="offer-item">
           <h3 class="offer-item-title">Малина даром!</h3>
-          <p class="offer-item-content">При покупке 2 кг любого фруктового мороженого,добавим
+          <p class="offer-item-content">При покупке 2 кг любого фруктового мороженого, добавим
             в ваш заказ банку малинового варенья бесплатно.</p>
           <a class="button offer-item-button" href="#">Хочу варенье!</a>
         </article>
         <article class="offer-item">
           <h3 class="offer-item-title">Шоколадки даром!</h3>
-          <p class="offer-item-content">При покупке 2 кг пломбира,добавим в ваш заказ упаковку
+          <p class="offer-item-content">При покупке 2 кг пломбира, добавим в ваш заказ упаковку
             вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
           <a class="button offer-item-button" href="#">Хочу варенье!</a>
         </article>
       </section>
-      <section class="bestseller">
+      <section class="bestseller container-center">
         <!--Секция "ХИТ" мороженного-->
         <ul class="bestseller-list">
           <li class="bestseller-item ice-cream">
@@ -97,7 +97,7 @@
           </li>
           <li class="bestseller-item ice-cream">
             <img src="img/ice2.png" width="267" height="267" alt="Сливочно-кофейное мороженое">
-            <p class="bestseller-price">80 &#8381;<span>/кг</span></p>
+            <p class="bestseller-price">380 &#8381;<span>/кг</span></p>
             <a class="link bestseller-item-desc" href="#">Сливочно-кофейное с кусочками
               шоколада</a>
             <a class="button bestseller-item-button" href="#">Быстрый просмотр</a>
@@ -118,7 +118,7 @@
           </li>
         </ul>
       </section>
-      <section class="features">
+      <section class="features container-center">
         <!--Преимущества-->
         <p class="features-title">
           Магазин Глейси - это онлайн и офлайн-магазин по продаже мороженого собственного
@@ -156,30 +156,31 @@
           </li>
         </ul>
       </section>
-      <section class="news">
+      <section class="news container-center">
         <!--Новости и форма отправки почты-->
         <div class="new-aside">
           <p class="news-aside-title">Новое в нашем блоге</p>
           <a class="news-aside-link" href="#">10 способов сервировки
             фруктовых щербетов <br>к столу</a>
         </div>
-        <div class="news-form">
-          <p class="news-form-desc">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе
-            всего самого вкусного, что у нас происходит. Обещаем не спамить
-            и не слать всякой ненужной ерунды. Честно =)</p>
-          <form action="send.php" method="post">
-            <input class="news-form-email" type="text" name="email" placeholder="email@example.com">
-            <button class="button news-form-button" type="submit" value="Отправить">Отправить</button>
-          </form>
+        <div class="post-border">
+          <div class="news-form">
+            <p class="news-form-desc">Подпишитесь на нашу сладкую рассылку и будьте всегда в курсе
+              всего самого вкусного, что у нас происходит. Обещаем не спамить
+              и не слать всякой ненужной ерунды. Честно =)</p>
+            <form action="send.php" method="post">
+              <input class="news-form-email" type="text" name="email" placeholder="email@example.com">
+              <a class="button news-form-button" type="submit" value="Отправить">Отправить</a>
+            </form>
+          </div>
         </div>
       </section>
       <section class="section-map">
         <!--Карта и форма обратной связи-->
         <iframe class="map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2945.093096143584!2d30.327572630331876!3d59.93889669726499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1599855773078!5m2!1sru!2sua"
-          width="1200" height="430" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+          width="100%" height="430" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
           tabindex="0"></iframe>
-        <img src="img/pin-map.svg" width="80" height="140" alt="Мы тут!">
         <div class="section-map-contacts">
           <p class="section-map-desc">
             Адрес главного офиса
@@ -187,7 +188,7 @@
           <address class="section-map-address">ул. Большая Конюшенная,
             19/8, Санкт-Петербург</address>
           </p>
-          <p class="section-map-desc">
+          <p class="section-map-desc2">
             Для заказов по телефону:
             <a class="link section-map-address" href="tel:88124502525">8 812 450-25-25</a>
             (с 10 до 20 ежедневно)
@@ -196,7 +197,7 @@
         </div>
       </section>
     </main>
-    <footer class="page-footer main-footer container-center">
+    <footer class="page-footer main-footer">
       <div class="footer-socials">
         <!--Соц сети-->
         <ul class="footer-socials-list">
@@ -225,10 +226,10 @@
       </div>
       <div class="footer-copy">
         <div class="logo-footer">
-        <a class="link footer-logo" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
-          <img src="img/logo-html.png" width="108" height="40" alt="HTML Academy">
-        </a>
-      </div>
+          <a class="link footer-logo" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
+            <img src="img/logo-html.png" width="108" height="40" alt="HTML Academy">
+          </a>
+        </div>
         <p>
           Сделано в <a class="link footer-link-copy" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
             HTML
