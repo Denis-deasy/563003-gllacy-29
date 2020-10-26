@@ -47,21 +47,21 @@
           <a class="link slider-info-phone" href="tel:88124502525">8 812 450-25-25</a>
         </div>
         <ul class="slider-list">
-          <li class="slider-item">
+          <li class="slider-item slide slide-current">
             <img class="slider-img" src="img/ice-cream1.png" width="716" height="716"
               alt="Два рожка мороженого крем-брюле и пломбир с малиновым джемом">
             <p class="slider-desc">Крем-брюле и пломбир
               с малиновым джемом</p>
             <a class="button slider-button" href="#">Давайте оба!</a>
           </li>
-          <li class="slider-item">
+          <li class="slider-item slide">
             <img class="slider-img" src="img/ice-cream2.png" width="716" height="716"
               alt="Два рожка мороженого шоколадный пломбир и лимонный сорбет">
             <p class="slider-desc">Шоколадный пломбир
               и лимонный сорбет</p>
             <a class="button slider-button" href="#">Давайте оба!</a>
           </li>
-          <li class="slider-item">
+          <li class="slider-item slide">
             <img class="slider-img" src="img/ice-cream3.png" width="716" height="716"
               alt="Два рожка мороженого пломбир с помадкой и клубличный щербет">
             <p class="slider-desc">Пломбир с помадкой
@@ -69,6 +69,11 @@
             <a class="button slider-button" href="#">Давайте оба!</a>
           </li>
         </ul>
+        <div class="slider-controls">
+          <button class="current" type="button" aria-label="Первый слайд"></button>
+          <button type="button" aria-label="Второй слайд"></button>
+          <button type="button" aria-label="Третий слайд"></button>
+        </div>
       </section>
       <section class="offer container-center">
         <!--Предложения опт-->
@@ -181,22 +186,23 @@
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2945.093096143584!2d30.327572630331876!3d59.93889669726499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1599855773078!5m2!1sru!2sua"
           width="100%" height="430" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
           tabindex="0"></iframe>
-        <div class="section-map-contacts">
-          <p class="section-map-desc">
-            Адрес главного офиса<br>
-            и офлайн-магазина:
-          <address class="section-map-address">ул. Большая Конюшенная,
-            19/8, Санкт-Петербург</address>
-          </p>
-          <p class="section-map-desc2">Для заказов по телефону:<br>
-          <a class="link section-map-number"
-              href="tel:88124502525">8 812 450-25-25</a><br>
-          (с 10 до 20 ежедневно)</p>
-          <a class="button section-map-button" href="#">Форма обратной связи</a>
+        <div class="container-map container-center">
+          <div class="section-map-contacts">
+            <p class="section-map-desc">
+              Адрес главного офиса<br>
+              и офлайн-магазина:
+            <address class="section-map-address">ул. Большая Конюшенная,
+              19/8, Санкт-Петербург</address>
+            </p>
+            <p class="section-map-desc2">Для заказов по телефону:<br>
+              <a class="link section-map-number" href="tel:88124502525">8 812 450-25-25</a><br>
+              (с 10 до 20 ежедневно)</p>
+            <a class="button section-map-button" href="#">Форма обратной связи</a>
+          </div>
         </div>
       </section>
     </main>
-    <footer class="page-footer main-footer">
+    <footer class="page-footer main-footer container-center">
       <div class="footer-socials">
         <!--Соц сети-->
         <ul class="footer-socials-list">

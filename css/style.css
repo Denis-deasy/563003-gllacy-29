@@ -250,6 +250,25 @@ p {
 
 /*Slider*/
 
+.slider-controls {
+  position: absolute;
+  top: 610px;
+  z-index: 10;
+  display: flex;
+  width: 67px;
+  justify-content: space-between;
+}
+
+.slider-controls button {
+  padding: 0;
+  width: 17px;
+  height: 17px;
+  background-color: transparent;
+  border: 2px solid var(--basic-white);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
 .slider-button {
   display: block;
   width: 278px;
@@ -263,6 +282,18 @@ p {
   margin: 27px auto 40px auto;
 }
 
+.slide {
+  display: none;
+}
+
+.slide-current {
+  display: block;
+}
+
+.slider-controls .current {
+  background-color: #ffffff;
+}
+
 .slider-list {
   list-style: none;
   padding: 0;
@@ -271,10 +302,6 @@ p {
 
 .slider-info {
   margin-top: 0px;
-}
-
-.slider-list li:not(:first-child) {
-  display: none;
 }
 
 .slider-item {
@@ -681,23 +708,34 @@ p {
 
 .section-map {
   position: relative;
-  margin-bottom: 100px;
+}
+
+.container-map {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 62px;
+  padding-bottom: 62px;
 }
 
 .map {
   position: absolute;
-  z-index: -1;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
 }
 
 .section-map-contacts {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
   width: 303px;
   height: 306px;
   border-radius: 16px;
   background-color: var(--basic-white);
-  margin-left: 980px;
-  margin-top: 70px;
   text-align: left;
   padding: 32px 25px 31px 25px;
+  z-index: 1;
 }
 
 .section-map-desc {
@@ -746,7 +784,6 @@ p {
 .main-footer {
   display: flex;
   justify-content: space-between;
-  margin: 18px 27px 25px 29px;
 }
 
 .second-footer {
@@ -773,8 +810,8 @@ p {
   position: absolute;
   top: 0px;
   left: 50px;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   background-image: url(../img/fb.svg);
   background-repeat: no-repeat;
 }
@@ -784,8 +821,8 @@ p {
   position: absolute;
   top: 0px;
   left: 100px;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   background-image: url(../img/vk.svg);
   background-repeat: no-repeat;
 }
@@ -795,8 +832,8 @@ p {
   position: absolute;
   top: 0px;
   left: 150px;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   background-image: url(../img/inst.svg);
   background-repeat: no-repeat;
 }
@@ -806,8 +843,8 @@ p {
   position: absolute;
   top: 0px;
   left: 200px;
-  width: 36px;
-  height: 36px;
+  width: 32px;
+  height: 32px;
   background-image: url(../img/twitter.svg);
   background-repeat: no-repeat;
 }
