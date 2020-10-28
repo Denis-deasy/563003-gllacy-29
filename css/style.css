@@ -295,12 +295,15 @@ legend {
   padding-left: 15px;
   background-image: url(../img/sorting-arrow.svg);
   background-repeat: no-repeat;
-  background-position: 90% 55%; 
+  background-position: 90% 55%;
   font-weight: 500;
 }
 
 .sorting:hover {
   color: var(--basic-black);
+  background-image: url(../img/sotring-arrow-black.svg);
+  background-repeat: no-repeat;
+  background-position: 90% 55%;
 }
 
 .range-controls {
@@ -339,9 +342,7 @@ legend {
 }
 
 .range-controls .toggle:hover {
-  width: 22px;
-  height: 22px;
-  top: 7px;
+  transform: scale(1.1);
 }
 
 .range-controls .toggle-min {
@@ -356,7 +357,6 @@ legend {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: relative;
   width: 425px;
   height: 36px;
   background-color: var(--basic-white-light);
@@ -370,15 +370,60 @@ legend {
   font-weight: 500;
 }
 
-.filter-input-radio::before {
+.filter-input-radio+label {
+  position: relative;
+  display: block;
+  user-select: none;
+}
+
+.filter-input-radio+label::before {
   content: "";
   position: absolute;
-  left: 0;
-  top: 0;
+  top: -2px;
+  left: -33px;
   width: 22px;
   height: 22px;
-  border: 2px solid var(--basic-white-middle);
+  border: 3px solid var(--basic-white-middle);
   border-radius: 50%;
+}
+
+.filter-input-radio:checked+label::after {
+  content: "";
+  position: absolute;
+  top: 4px;
+  left: -27px;
+  width: 8px;
+  height: 8px;
+  border: 5px solid var(--basic-white-middle);
+  border-radius: 50%;
+}
+
+.filter-input-checkbox+label {
+  position: relative;
+  display: block;
+  user-select: none;
+}
+
+.filter-input-checkbox+label::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -33px;
+  width: 20px;
+  height: 20px;
+  background-image: url(../img/checkbox-off.svg);
+  background-repeat: no-repeat;
+}
+
+.filter-input-checkbox:checked+label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -33px;
+  width: 24px;
+  height: 20px;
+  background-image: url(../img/mark-checkbox.svg);
+  background-repeat: no-repeat;
 }
 
 .excipients {
@@ -409,6 +454,7 @@ legend {
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
+  outline: none;
 }
 
 .filter-button:hover {
@@ -420,6 +466,10 @@ legend {
   box-shadow: inset 0px 2px 1px #696969;
 }
 
+.filter-button:focus {
+  outline: var(--basic-white-light) none 1px;
+  outline-offset: 1px;
+}
 
 .visually-hidden {
   position: absolute;

@@ -83,20 +83,20 @@
         <fieldset>
           <legend>Жирность:</legend>
           <div class="fatness">
-            <input class="visually-hidden filter-input-radio" name="percent" type="radio" value="0">0%
-            <input class="filter-input-radio visually-hidden" name="percent" type="radio" value="before 10" checked>до 10%
-            <input class="filter-input-radio visually-hidden" name="percent" type="radio" value="before 30">до 30%
-            <input class="filter-input-radio visually-hidden" name="percent" type="radio" value="higher 30">выше 30%
+            <input class="visually-hidden filter-input-radio" name="percent" type="radio" value="0" id="filter-zero"><label for="filter-zero">0%</label>
+            <input class="filter-input-radio visually-hidden" name="percent" type="radio" value="before 10" id="filter-before-ten" checked><label for="filter-before-ten">до 10%</label>
+            <input class="filter-input-radio visually-hidden" name="percent" type="radio" value="before 30" id="filter-before-thirty"><label for="filter-before-thirty">до 30%</label>
+            <input class="filter-input-radio visually-hidden" name="percent" type="radio" value="higher 30" id="filter-high-thirty"><label for="filter-high-thirty">выше 30%</label>
           </div>
         </fieldset>
         <fieldset>
           <legend>Наполнители:</legend>
           <div class="excipients">
-            <input class="visually-hidden" type="checkbox" name="option1" value="option1" checked>шоколадные
-            <input class="visually-hidden" type="checkbox" name="option2" value="option2" checked>сахарные присыпки
-            <input class="visually-hidden" type="checkbox" name="option3" value="option3">фрукты
-            <input class="visually-hidden" type="checkbox" name="option4" value="option4">сиропы
-            <input class="visually-hidden" type="checkbox" name="option5" value="option5">джемы
+            <input class="filter-input-checkbox visually-hidden" type="checkbox" name="option1" value="option1" checked id="option1"><label for="option1">шоколадные</label>
+            <input class="filter-input-checkbox visually-hidden" type="checkbox" name="option2" value="option2" checked id="option2"><label for="option2">сахарные присыпки</label>
+            <input class="filter-input-checkbox visually-hidden" type="checkbox" name="option3" value="option3" id="option3"><label for="option3">фрукты</label>
+            <input class="filter-input-checkbox visually-hidden" type="checkbox" name="option4" value="option4" id="option4"><label for="option4">сиропы</label>
+            <input class="filter-input-checkbox visually-hidden" type="checkbox" name="option5" value="option5" id="option5"><label for="option5">джемы</label>
           </div>
         </fieldset>
         <button class="filter-button" type="submit" value="Применить">Применить</button>
