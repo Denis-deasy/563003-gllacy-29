@@ -12,29 +12,59 @@
 
 <body>
   <header class="main-header container-center">
-    <a class="link main-header-logo" href="index.html">
-      <img src="img/logo.png" width="150" height="100" alt="Логотип интернет магазина Глейси">
+
+    <a class="link main-header-logo">
+      <img src="img/logo.png" width="154" height="64" aria-label="Логотип интернет магазина Глейси">
     </a>
     <nav class="main-nav">
       <ul class="site-nav">
-        <li class="site-nav-item opened"><a class="link" href="catalog.html">Каталог</a>
-          <ul class="dropdown-nav-list">
-            <li class="dropdown-nav-item"><a class="link" href="#">Новинки</a></li>
-            <li class="pagination"><a class="link" href="catalog.html">Сливочное</a></li>
-            <li class="dropdown-nav-item"><a class="link" href="#">Щербеты</a></li>
-            <li class="dropdown-nav-item"><a class="link" href="#">Фрутковый лед</a></li>
-            <li class="dropdown-nav-item"><a class="link" href="#">Мелорин</a></li>
+        <li class="site-nav-item main-site-nav-item hover-menu"><a class="link" href="catalog.html"
+            aria-label="Основное меню раздел каталог с подменю">Каталог</a>
+          <ul class="dropdown-nav-list" aria-label="Раздел подменю каталога">
+            <li class="dropdown-nav-item news-dropdown-item"><a class="link" href="#" aria-label="Новинки">Новинки</a>
+            </li>
+            <li class="dropdown-nav-item pagination"><a class="link" href="catalog.html"
+                aria-label="Сливочное">Сливочное</a></li>
+            <li class="dropdown-nav-item" aria-label="Щербеты"><a class="link" href="#">Щербеты</a></li>
+            <li class="dropdown-nav-item" aria-label="Фрутковый лед"><a class="link" href="#">Фруктовый лед</a></li>
+            <li class="dropdown-nav-item" aria-label="Мелорин"><a class="link" href="#">Мелорин</a></li>
           </ul>
         </li>
-        <li class="site-nav-item"><a class="link" href="#">Доставка и оплата</a></li>
-        <li class="site-nav-item"><a class="link" href="#">О компании</a></li>
+        <li class="site-nav-item main-site-nav-item" aria-label="Основное меню раздел каталог с подменю"><a class="link"
+            href="#">Доставка и оплата</a></li>
+        <li class="site-nav-item main-site-nav-item"><a class="link" href="#">О компании</a></li>
       </ul>
     </nav>
     <ul class="user-nav-list">
-      <li class="user-nav-item link-search"><a class="link" href="#"></a></li>
+      <li class="user-nav-item" aria-label="Поиск по сайту">
+        <a class="link link-search" href="#"></a>
+        <div class="dropdown-search">
+          <form action="#">
+            <input class="search-item" type="search" name="Поиск" placeholder="Крем-брюле">
+          </form>
+        </div>
+      </li>
       <!--Поиск-->
-      <li class="user-nav-item link-login"><a class="link" href="#">Вход</a></li>
-      <li class="user-nav-item link-full-basket"><a class="link" href="#">2&nbsp;товара</a></li>
+      <li class="user-nav-item2" aria-label="Кнопка входа для логина">
+        <a class="link link-login" href="#">Вход</a>
+        <svg class="icon-login" width="20" height="19" viewBox="0 0 20 19" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M6.04 14.88L12.96 9.5L6.04 4.13V7.04H0V11.96H6.04V14.88Z" fill="white" />
+          <path
+            d="M18 0H5C4.46957 0 3.96086 0.210714 3.58579 0.585786C3.21071 0.960859 3 1.46957 3 2V4H5V2H18V17H5V15H3V17C3 17.5304 3.21071 18.0391 3.58579 18.4142C3.96086 18.7893 4.46957 19 5 19H18C18.5304 19 19.0391 18.7893 19.4142 18.4142C19.7893 18.0391 20 17.5304 20 17V2C20 1.46957 19.7893 0.960859 19.4142 0.585786C19.0391 0.210714 18.5304 0 18 0Z"
+            fill="white" />
+        </svg>
+        <div class="dropdown-login">
+          <form action="#">
+            <input class="login-item" type="text" name="login" placeholder="email@example.com">
+            <input class="login-item" type="password" name="password">
+            <a class="button login-button" type="submit" name="submit">Войти</a>
+            <a class="login-quest">Забыли пароль?</a>
+            <a class="login-quest">Новая регистрация</a>
+          </form>
+        </div>
+      </li>
+      <li class="user-nav-item" aria-label="Корзина"><a class="link link-basket" href="#">Пусто</a></li>
       <!--Корзина-->
     </ul>
   </header>
@@ -70,7 +100,7 @@
         </fieldset>
         <fieldset class="range-filter">
           <legend class="price-controls">
-            Цена: 100 &#8381; - 500 &#8381;
+            Цена: 100 &#8381; &ndash; 500 &#8381;
           </legend>
           <div class="range-controls">
             <div class="scale">
@@ -83,20 +113,29 @@
         <fieldset>
           <legend>Жирность:</legend>
           <div class="fatness">
-            <input class="visually-hidden filter-input-radio" name="percent" type="radio" value="0" id="filter-zero"><label for="filter-zero">0%</label>
-            <input class="filter-input-radio visually-hidden" name="percent" type="radio" value="before 10" id="filter-before-ten" checked><label for="filter-before-ten">до 10%</label>
-            <input class="filter-input-radio visually-hidden" name="percent" type="radio" value="before 30" id="filter-before-thirty"><label for="filter-before-thirty">до 30%</label>
-            <input class="filter-input-radio visually-hidden" name="percent" type="radio" value="higher 30" id="filter-high-thirty"><label for="filter-high-thirty">выше 30%</label>
+            <input class="visually-hidden filter-input-radio" name="percent" type="radio" value="0"
+              id="filter-zero"><label for="filter-zero">0%</label>
+            <input class="filter-input-radio visually-hidden" name="percent" type="radio" value="before 10"
+              id="filter-before-ten" checked><label for="filter-before-ten">до 10%</label>
+            <input class="filter-input-radio visually-hidden" name="percent" type="radio" value="before 30"
+              id="filter-before-thirty"><label for="filter-before-thirty">до 30%</label>
+            <input class="filter-input-radio visually-hidden" name="percent" type="radio" value="higher 30"
+              id="filter-high-thirty"><label for="filter-high-thirty">выше 30%</label>
           </div>
         </fieldset>
         <fieldset>
           <legend>Наполнители:</legend>
           <div class="excipients">
-            <input class="filter-input-checkbox visually-hidden" type="checkbox" name="option1" value="option1" checked id="option1"><label for="option1">шоколадные</label>
-            <input class="filter-input-checkbox visually-hidden" type="checkbox" name="option2" value="option2" checked id="option2"><label for="option2">сахарные присыпки</label>
-            <input class="filter-input-checkbox visually-hidden" type="checkbox" name="option3" value="option3" id="option3"><label for="option3">фрукты</label>
-            <input class="filter-input-checkbox visually-hidden" type="checkbox" name="option4" value="option4" id="option4"><label for="option4">сиропы</label>
-            <input class="filter-input-checkbox visually-hidden" type="checkbox" name="option5" value="option5" id="option5"><label for="option5">джемы</label>
+            <input class="filter-input-checkbox visually-hidden" type="checkbox" name="option1" value="option1" checked
+              id="option1"><label for="option1">шоколадные</label>
+            <input class="filter-input-checkbox visually-hidden" type="checkbox" name="option2" value="option2" checked
+              id="option2"><label for="option2">сахарные присыпки</label>
+            <input class="filter-input-checkbox visually-hidden" type="checkbox" name="option3" value="option3"
+              id="option3"><label for="option3">фрукты</label>
+            <input class="filter-input-checkbox visually-hidden" type="checkbox" name="option4" value="option4"
+              id="option4"><label for="option4">сиропы</label>
+            <input class="filter-input-checkbox visually-hidden" type="checkbox" name="option5" value="option5"
+              id="option5"><label for="option5">джемы</label>
           </div>
         </fieldset>
         <button class="filter-button" type="submit" value="Применить">Применить</button>
@@ -128,14 +167,13 @@
         <li class="catalog-item">
           <img src="img/ice4.png" width="267" height="267" alt="Сливочное крем-брюле мороженое">
           <p class="catalog-price">415 &#8381;<span>/кг</span></p>
-          <a class="catalog-desc" href="#">Сливочное крем-брюле
-            с карамельной подливкой</a>
+          <a class="catalog-desc" href="#">Сливочное крем-брюле<br>с карамельной подливкой</a>
           <a class="catalog-button" href="#">Быстрый просмотр</a>
         </li>
         <li class="catalog-item">
           <img src="img/ice5.png" width="267" height="267" alt="Сливочное с брусничным джемом">
           <p class="catalog-price">325 &#8381;<span>/кг</span></p>
-          <a class="catalog-desc" href="#">Сливочное с брусничным джемом</a>
+          <a class="catalog-desc" href="#">Сливочное с брусничным<br>джемом</a>
           <a class="catalog-button" href="#">Быстрый просмотр</a>
         </li>
         <li class="catalog-item">
@@ -159,7 +197,7 @@
         <li class="catalog-item">
           <img src="img/ice9.png" width="267" height="267" alt="Сливочно-ванильное с кусочками шоколада">
           <p class="catalog-price">440 &#8381;<span>/кг</span></p>
-          <a class="catalog-desc" href="#">Сливочно-ванильное с кусочками шоколада</a>
+          <a class="catalog-desc" href="#">Сливочно-ванильное<br>с кусочками шоколада</a>
           <a class="catalog-button" href="#">Быстрый просмотр</a>
         </li>
         <li class="catalog-item">
@@ -207,13 +245,13 @@
     <ul class="footer-socials-list">
       <li class="footer-socials-item">
         <a class="link social-button" href="#" title="Facebook" target="_blank"><svg xmlns="http://www.w3.org/2000/svg"
-            width="32" height="32" viewBox="0 0 32 32">
+            width="36" height="36" viewBox="0 0 32 32">
             <path
               d="M16 0C7.164 0 0 7.163 0 16s7.164 16 16 16c8.837 0 16-7.164 16-16S24.837 0 16 0zm4.062 9.455h-3.021v3.444h3.021v3.445h-3.021v8.61H14.02v-8.61H11v-3.445h3.021V9.455c0-1.902 1.353-3.445 3.021-3.445h3.021v3.445z" />
           </svg></a>
       </li>
       <li class="footer-socials-item">
-        <a class="link social-button" href="#" title="Vkontakte" target="_blank"><svg width="32" height="32"
+        <a class="link social-button" href="#" title="Vkontakte" target="_blank"><svg width="36" height="36"
             viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M16.64 14.49C16.9652 14.4904 17.2875 14.4293 17.59 14.31C17.8645 14.2077 18.0922 14.0085 18.23 13.75C18.3343 13.4964 18.3854 13.2241 18.38 12.95C18.376 12.7057 18.3143 12.4659 18.2 12.25C18.0714 12.0066 17.8523 11.8235 17.59 11.74C17.2687 11.627 16.9306 11.5695 16.59 11.57H14.59V14.57H15.16C15.75 14.52 16.24 14.51 16.64 14.49Z" />
@@ -225,7 +263,7 @@
         </a>
       </li>
       <li class="footer-socials-item">
-        <a class="link social-button" href="#" title="Instagram" target="_blank"><svg width="32" height="32"
+        <a class="link social-button" href="#" title="Instagram" target="_blank"><svg width="36" height="36"
             viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g>
               <path
@@ -240,7 +278,7 @@
         </a>
       </li>
       <li class="footer-socials-item">
-        <a class="link social-button" href="#" title="Twitter" target="_blank"><svg width="32" height="32"
+        <a class="link social-button" href="#" title="Twitter" target="_blank"><svg width="36" height="36"
             viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M16 0C12.8355 0 9.74207 0.938384 7.11088 2.69649C4.4797 4.45459 2.42894 6.95345 1.21793 9.87706C0.0069325 12.8007 -0.309921 16.0177 0.307443 19.1214C0.924806 22.2251 2.44866 25.0761 4.6863 27.3137C6.92394 29.5513 9.77487 31.0752 12.8786 31.6926C15.9823 32.3099 19.1993 31.9931 22.1229 30.7821C25.0466 29.5711 27.5454 27.5203 29.3035 24.8891C31.0616 22.2579 32 19.1645 32 16C32 11.7565 30.3143 7.68687 27.3137 4.68629C24.3131 1.68571 20.2435 0 16 0ZM23.94 12.81C23.69 19.33 20.48 23.64 12.94 23.51H12.46C12.01 23.51 7.91001 23.07 7.11001 21.69C8.8989 21.9555 10.7228 21.5494 12.23 20.55C11.18 20.26 9.31001 20.09 8.98001 17.7C9.39279 17.8642 9.84415 17.9058 10.28 17.82C9.00001 17 7.53001 16.3 7.61001 14.17C8.02795 14.4893 8.54454 14.652 9.07001 14.63C8.30001 14.4 6.92001 11.39 8.07001 9.85C10.07 11.64 12.14 13.33 15.87 13.49C16.1 11.28 17.11 9.79 19.04 9.17C19.7375 8.93332 20.4908 8.91568 21.1986 9.11946C21.9065 9.32323 22.5351 9.73867 23 10.31C23.74 10.08 24.45 9.84 25.19 9.62C25.1758 9.95711 25.0846 10.2865 24.9234 10.5829C24.7622 10.8793 24.5353 11.1349 24.26 11.33C24.5167 11.3601 24.7768 11.3336 25.0221 11.2524C25.2674 11.1712 25.492 11.0372 25.68 10.86C25.5628 11.2985 25.3443 11.7034 25.0421 12.0421C24.7399 12.3808 24.3624 12.6438 23.94 12.81Z" />
@@ -255,7 +293,7 @@
       <li class="footer-links-item"><a class="link" href="#">О производстве</a></li>
       <li class="footer-links-item"><a class="link" href="#">Экологические стандарты</a></li>
     </ul>
-    <div class="footer-copy">
+    <div class="footer-copy catalog-footer-copy">
       <a class="link footer-logo" href="https://htmlacademy.ru/intensive/htmlcss" target="_blank">
         <img src="img/logo-html.png" width="108" height="40" alt="HTML Academy">
       </a>
