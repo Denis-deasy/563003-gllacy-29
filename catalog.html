@@ -7,7 +7,7 @@
   <title>Каталог - магазин «Глейси»</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body class="site-wrapper-1">
@@ -20,23 +20,23 @@
       <ul class="site-nav">
         <li class="site-nav-item main-site-nav-item opened hover-menu"><a class="link" href="catalog.html"
             aria-label="Основное меню раздел каталог с подменю">Каталог</a>
-          <ul class="dropdown-nav-list" aria-label="Раздел подменю каталога">
+          <ul class="dropdown-nav-list">
             <li class="dropdown-nav-item news-dropdown-item"><a class="link" href="#" aria-label="Новинки">Новинки</a>
             </li>
             <li class="dropdown-nav-item pagination"><a class="link" href="catalog.html"
                 aria-label="Сливочное">Сливочное</a></li>
-            <li class="dropdown-nav-item" aria-label="Щербеты"><a class="link" href="#">Щербеты</a></li>
-            <li class="dropdown-nav-item" aria-label="Фрутковый лед"><a class="link" href="#">Фруктовый лед</a></li>
-            <li class="dropdown-nav-item" aria-label="Мелорин"><a class="link" href="#">Мелорин</a></li>
+            <li class="dropdown-nav-item opened-item"><a class="link opened-item-link" href="#">Щербеты</a></li>
+            <li class="dropdown-nav-item"><a class="link" href="#">Фруктовый лед</a></li>
+            <li class="dropdown-nav-item"><a class="link" href="#">Мелорин</a></li>
           </ul>
         </li>
-        <li class="site-nav-item main-site-nav-item" aria-label="Основное меню раздел каталог с подменю"><a class="link"
+        <li class="site-nav-item main-site-nav-item" ><a class="link"
             href="#">Доставка и оплата</a></li>
         <li class="site-nav-item main-site-nav-item"><a class="link" href="#">О компании</a></li>
       </ul>
     </nav>
     <ul class="user-nav-list">
-      <li class="user-nav-item" aria-label="Поиск по сайту">
+      <li class="user-nav-item">
         <a class="link link-search" href="#"></a>
         <div class="dropdown-search">
           <form action="#">
@@ -45,7 +45,7 @@
         </div>
       </li>
       <!--Поиск-->
-      <li class="user-nav-item2" aria-label="Кнопка входа для логина">
+      <li class="user-nav-item2">
         <a class="link link-login" href="#"><svg class="icon-login" width="20" height="19" viewBox="0 0 20 19"
             fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M6.04 14.88L12.96 9.5L6.04 4.13V7.04H0V11.96H6.04V14.88Z" />
@@ -56,13 +56,13 @@
           <form action="#">
             <input class="login-item" type="text" name="login" placeholder="email@example.com">
             <input class="login-item" type="password" name="password" placeholder="••••••">
-            <a class="button login-button" href="#" name="button">Войти</a>
+            <a class="button login-button" href="#">Войти</a>
             <a class="login-quest">Забыли пароль?</a>
             <a class="login-quest">Новая регистрация</a>
           </form>
         </div>
       </li>
-      <li class="user-nav-item4" aria-label="Корзина">
+      <li class="user-nav-item4">
         <a class="link link-basket" href="#"><svg class="icon-login4" width="21" height="20" viewBox="0 0 21 20"
             fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -122,6 +122,7 @@
       <h1 class="caption">Сливочное мороженое</h1>
     </div>
     <section class="filters">
+      <h3 class="visually-hidden">Фильтры для каталога с товарами мороженого</h3>
       <form class="catalog-form" action="#" method="POST">
         <fieldset>
           <legend>Сортировка:</legend>
@@ -150,7 +151,7 @@
             <input class="visually-hidden filter-input-radio" name="percent" type="radio" value="0"
               id="filter-zero"><label for="filter-zero">0%</label>
             <input class="filter-input-radio visually-hidden" name="percent" type="radio" value="before 10"
-              id="filter-before-ten" checked><label for="filter-before-ten">до 10%</label>
+              id="filter-before-ten" checked ><label for="filter-before-ten">до 10%</label>
             <input class="filter-input-radio visually-hidden" name="percent" type="radio" value="before 30"
               id="filter-before-thirty"><label for="filter-before-thirty">до 30%</label>
             <input class="filter-input-radio visually-hidden" name="percent" type="radio" value="higher 30"
@@ -166,7 +167,7 @@
               id="option2"><label for="option2">сахарные присыпки</label>
             <input class="filter-input-checkbox visually-hidden" type="checkbox" name="option3" value="option3"
               id="option3"><label for="option3">фрукты</label>
-            <input class="filter-input-checkbox visually-hidden" type="checkbox" name="option4" value="option4"
+            <input class="filter-input-checkbox visually-hidden" type="checkbox" name="option4" value="option4" 
               id="option4"><label for="option4">сиропы</label>
             <input class="filter-input-checkbox visually-hidden" type="checkbox" name="option5" value="option5"
               id="option5"><label for="option5">джемы</label>
@@ -176,6 +177,7 @@
       </form>
     </section>
     <section class="catalog">
+      <h3 class="visually-hidden">Каталог с мороженным</h3>
       <ul class="catalog-list">
         <li class="catalog-item">
           <div class="catalog-item-hover">

@@ -31,6 +31,8 @@
   --lighter-black-underline: rgba(50, 50, 50, 0.2);
   --modal-black-close: #231F20;
   --modal-border-gray: rgba(178, 178, 178, 0.52);
+  --modal-input-blue: #2E88E4;
+  --modal-input-hover: #b2b2b2;
   --special: rgba(242, 104, 67, 1);
   --special-black: rgba(0, 0, 0, 0.07);
   --special-gradient: linear-gradient(180deg, #F26843 0%, #E74A35 100%);
@@ -50,7 +52,7 @@ body {
   line-height: 24px;
   font-weight: 400;
   color: var(--basic-white);
-  /* background-color: var(--basic-green-main); */
+  background-color: var(--basic-green-main);
 }
 
 img {
@@ -139,6 +141,10 @@ p {
   margin: 23px 4px 26px 0px;
 }
 
+.opened-item {
+  background-color: var(--basic-red-dark);
+}
+
 .opened .link {
   text-decoration: none;
 }
@@ -160,8 +166,8 @@ p {
 .dropdown-nav-list {
   display: none;
   position: absolute;
-  top: 59px;
-  left: 304px;
+  top: 36px;
+  left: -7px;
   width: 143px;
   height: 171px;
   padding: 0px;
@@ -213,6 +219,7 @@ p {
 }
 
 .site-nav-item:first-child:hover {
+  position: relative;
   background-color: var(--basic-white);
   border-radius: 26px;
   padding: 6px 14px 0px;
@@ -231,7 +238,15 @@ p {
   font-weight: 700;
 }
 
-.hover-menu:hover a {
+.dropdown-nav-list .link {
+  color: var(--basic-black);
+}
+
+.dropdown-nav-item .opened-item-link {
+  color: var(--basic-white);
+}
+
+.opened-item:hover>a {
   color: var(--basic-black);
 }
 
@@ -282,6 +297,7 @@ p {
 }
 
 .user-nav-item2 {
+  position: relative;
   margin-left: 9px;
   padding-bottom: 20px;
 }
@@ -393,7 +409,6 @@ legend {
   border: none;
   margin: 6px 0px 14px;
   color: var(--basic-white);
-  appearance: none;
   padding-left: 16px;
   background-image: url("../img/sorting-arrow.svg");
   background-repeat: no-repeat;
@@ -401,6 +416,8 @@ legend {
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
+  -webkit-appearance: none;
+  appearance: none;
 }
 
 .sorting:hover {
@@ -494,6 +511,10 @@ legend {
   border-radius: 50%;
 }
 
+.filter-input-radio+label:hover::before {
+  border-color: var(--basic-white);
+}
+
 .filter-input-radio:checked+label::after {
   content: "";
   position: absolute;
@@ -503,6 +524,18 @@ legend {
   height: 8px;
   border: 5px solid var(--basic-white-middle);
   border-radius: 50%;
+}
+
+.filter-input-radio:checked+label:hover::after {
+  border-color: var(--basic-white);
+}
+
+.filter-input-radio:checked:disabled+label::before {
+  border-color: var(--basic-white-low);
+}
+
+.filter-input-radio:checked:disabled+label::after {
+  border-color: var(--basic-white-low);
 }
 
 .filter-input-checkbox+label {
@@ -524,6 +557,10 @@ legend {
   background-repeat: no-repeat;
 }
 
+.filter-input-checkbox+label:hover::before {
+  background-image: url("../img/checkbox-off-hover.svg");
+}
+
 .filter-input-checkbox:checked+label::before {
   content: "";
   position: absolute;
@@ -533,6 +570,19 @@ legend {
   height: 20px;
   background-image: url("../img/mark-checkbox.svg");
   background-repeat: no-repeat;
+}
+
+.filter-input-checkbox:checked+label:hover::before {
+  background-image: url("../img/checkbox-on-hover.svg");
+}
+
+.filter-input-checkbox:disabled+label::before {
+  background-image: url("../img/checkbox-disable-off.svg");
+  width: 24px;
+}
+
+.filter-input-checkbox:checked:disabled+label::before {
+  background-image: url("../img/checkbox-disable-on.svg");
 }
 
 .excipients {
@@ -590,7 +640,7 @@ legend {
   padding: 0px;
   white-space: nowrap;
   clip-path: inset(100%);
-  clip: rect(0px, 0px, 0px, 0px);
+  clip: rect(0, 0, 0, 0);
   overflow: hidden;
 }
 
@@ -700,11 +750,12 @@ legend {
   position: absolute;
   top: 0px;
   left: 50%;
+  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   max-width: none;
   width: auto;
   height: auto;
-  z-index: -1;
+  z-index: -5;
 }
 
 .slider-desc {
@@ -720,8 +771,9 @@ legend {
   display: flex;
 }
 
-.offer-item:first-child {
+.offer-item:nth-child(2) {
   margin-right: 26px;
+  background-color: var(--basic-red);
   background-image: url("../img/raspberry-bg.jpg");
   background-repeat: no-repeat;
 }
@@ -729,11 +781,15 @@ legend {
 .offer-item {
   display: flex;
   flex-direction: column;
-  background-image: url("../img/chocolate-bg.jpg");
-  background-repeat: no-repeat;
   border-radius: 16px;
   width: 560px;
   height: 229px;
+}
+
+.offer-item:nth-child(3) {
+  background-color: var(--basic-brown-main);
+  background-image: url("../img/chocolate-bg.jpg");
+  background-repeat: no-repeat;
 }
 
 .offer-item-title {
@@ -1127,9 +1183,11 @@ legend {
 .features {
   width: 1146px;
   height: 306px;
+  background-color: var(--basic-brown-main);
   background-image: url("../img/wafer-bg.png");
   background-repeat: no-repeat;
   color: var(--basic-black);
+  border-radius: 15px;
 }
 
 .features-list {
@@ -1223,14 +1281,18 @@ legend {
 .new-aside {
   display: flex;
   flex-flow: column wrap;
+  background-color: var(--basic-white);
   background-image: url("../img/strawberry-bg.png");
   background-repeat: no-repeat;
+  border-radius: 17px;
 }
 
 .post-border {
+  background-color: var(--basic-white-middle);
   background-image: url("../img/post-index.png");
   background-repeat: no-repeat;
   padding: 5px;
+  border-radius: 17px;
 }
 
 .news-aside-title {
@@ -1312,6 +1374,7 @@ legend {
   left: 0px;
   width: 100%;
   height: 100%;
+  border: none;
 }
 
 .section-map-contacts {
@@ -1337,7 +1400,7 @@ legend {
   font-size: 14px;
   line-height: 20px;
   color: var(--basic-black);
-  margin-top: 7px;
+  margin-top: 21px;
   margin-bottom: 3px;
 }
 
@@ -1515,8 +1578,8 @@ legend {
 .dropdown-login {
   display: none;
   position: absolute;
-  top: 59px;
-  right: 257px;
+  top: 36px;
+  right: 2px;
   width: 277px;
   height: 214px;
   background-color: var(--basic-gray-light);
@@ -1554,6 +1617,8 @@ legend {
   line-height: 16px;
   font-weight: 700;
   padding: 14px 0px 0px 25px;
+  text-decoration: none;
+  color: var(--basic-white);
 }
 
 .login-quest {
@@ -1730,6 +1795,10 @@ legend {
   margin: 15px 0 0 24px;
 }
 
+.modal-name::placeholder, .modal-email::placeholder {
+  font-weight: normal;
+}
+
 .modal-name, .modal-email {
   width: 267px;
   height: 44px;
@@ -1741,6 +1810,15 @@ legend {
   padding-left: 14px;
   font-size: 16px;
   line-height: 20px;
+  font-weight: bold;
+}
+
+.modal-name:hover, .modal-email:hover, .modal-text:hover {
+  border-color: var(--modal-input-hover);
+}
+
+.modal-name:focus, .modal-email:focus, .modal-text:focus {
+  border-color: var(--modal-input-blue);
 }
 
 .modal-close::before, .modal-close::after {

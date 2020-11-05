@@ -6,7 +6,7 @@
   <title>HTML Academy: Глейси</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
@@ -53,7 +53,7 @@
             <form action="#">
               <input class="login-item" type="text" name="login" placeholder="email@example.com">
               <input class="login-item" type="password" name="password" placeholder="••••••">
-              <a class="button login-button" href="#" name="button">Войти</a>
+              <a class="button login-button" href="#">Войти</a>
               <a class="login-quest">Забыли пароль?</a>
               <a class="login-quest">Новая регистрация</a>
             </form>
@@ -75,6 +75,7 @@
     </header>
     <main class="container">
       <section class="slider container-center">
+        <h3 class="visually-hidden">Слайдер с мороженным и кнопкой выбрать оба</h3>
         <!--Слайдер-->
         <div class="breadcrumbs-info">
           <p class="slider-info">c 10 до 20, ежедневно</p>
@@ -110,6 +111,7 @@
         </div>
       </section>
       <section class="offer container-center">
+        <h3 class="visually-hidden">Два предложения оптовой покупки мороженного с бонусами</h3>
         <!--Предложения опт-->
         <article class="offer-item">
           <h3 class="offer-item-title">Малинка даром!</h3>
@@ -125,6 +127,7 @@
         </article>
       </section>
       <section class="bestseller container-center">
+        <h3 class="visually-hidden">Самое популярное мороженое</h3>
         <!--Секция "ХИТ" мороженного-->
         <ul class="bestseller-list">
           <li class="bestseller-item ice-cream">
@@ -165,6 +168,7 @@
         </ul>
       </section>
       <section class="features container-center">
+        <h3 class="visually-hidden">Преимущества нашего магазина Глэйси</h3>
         <!--Преимущества-->
         <p class="features-title">
           Магазин Глэйси &ndash; это онлайн и офлайн-магазин по продаже мороженого собственного
@@ -203,6 +207,7 @@
         </ul>
       </section>
       <section class="news container-center">
+        <h3 class="visually-hidden">Новости про мороженое и форма подписки на рассылку новосте</h3>
         <!--Новости и форма отправки почты-->
         <div class="new-aside">
           <p class="news-aside-title">Новое в нашем блоге</p>
@@ -222,19 +227,15 @@
         </div>
       </section>
       <section class="section-map">
+        <h3 class="visually-hidden">Карта где нас можно найти и форма обратной связи</h3>
         <!--Карта и форма обратной связи-->
         <iframe class="map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2945.093096143584!2d30.327572630331876!3d59.93889669726499!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2sua!4v1599855773078!5m2!1sru!2sua"
-          width="100%" height="430" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-          tabindex="0"></iframe>
+          style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         <div class="container-map container-center">
           <div class="section-map-contacts">
-            <p class="section-map-desc">
-              Адрес главного офиса<br>
-              и офлайн-магазина:
-            <address class="section-map-address">ул. Большая Конюшенная,
-              19/8, Санкт-Петербург</address>
-            </p>
+            <p class="section-map-desc">Адрес главного офиса<br>и офлайн-магазина:</p>
+            <address class="section-map-address">ул. Большая Конюшенная,<br>19/8, Санкт-Петербург</address>
             <p class="section-map-desc2">Для заказов по телефону:</p>
             <a class="link section-map-number" href="tel:88124502525">8 812 450-25-25</a><br>
             <p class="section-map-desc3">(с 10 до 20 ежедневно)</p>
@@ -309,6 +310,7 @@
     </footer>
   </div>
   <section class="modal modal-form">
+    <h3 class="visually-hidden">Форма обратной связи</h3>
     <form class="login-form" action="#" method="post">
       <p class="modal-description">Мы обязательно вам ответим!</p>
       <input class="modal-name" type="text" name="name" placeholder="Имя Фамилия">
@@ -319,7 +321,7 @@
     </form>
   </section>
 
-  <script src="js/script.js"></script>
+  <script src="js/script.min.js"></script>
 </body>
 
 </html>
