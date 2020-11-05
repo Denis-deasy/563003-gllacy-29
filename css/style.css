@@ -821,6 +821,7 @@ legend {
   line-height: 24px;
   padding-top: 12px;
   padding-left: 22px;
+  font-weight: bold;
 }
 
 .offer-item-button2 {
@@ -834,6 +835,7 @@ legend {
   line-height: 24px;
   padding-top: 13px;
   padding-left: 22px;
+  font-weight: bold;
 }
 
 .bestseller {
