@@ -40,7 +40,8 @@
         <a class="link link-search" href="#"></a>
         <div class="dropdown-search">
           <form action="#">
-            <input class="search-item" type="search" name="Поиск" placeholder="Крем-брюле">
+            <label class="visually-hidden" for="search">Поиск</label>
+            <input class="search-item" id="search" type="search" name="Поиск" placeholder="Крем-брюле">
           </form>
         </div>
       </li>
@@ -54,8 +55,10 @@
           </svg>Вход</a>
         <div class="dropdown-login">
           <form action="#">
-            <input class="login-item" type="text" name="login" placeholder="email@example.com">
-            <input class="login-item" type="password" name="password" placeholder="••••••">
+            <label class="visually-hidden" for="login">Ваша почта</label>
+            <input class="login-item" id="login" type="text" name="login" placeholder="email@example.com">
+            <label class="visually-hidden" for="password">Ваш пароль</label>
+            <input class="login-item" id="password" type="password" name="password" placeholder="••••••">
             <a class="button login-button" href="#">Войти</a>
             <a class="login-quest">Забыли пароль?</a>
             <a class="login-quest">Новая регистрация</a>
@@ -126,7 +129,8 @@
       <form class="catalog-form" action="#" method="POST">
         <fieldset>
           <legend>Сортировка:</legend>
-          <select class="sorting" name="sorting">
+          <label class="visually-hidden" for="sort">Поиск</label>
+          <select class="sorting" id="sort" name="sorting">
             <option selected value="по популярности">по популярности</option>
             <option value="сначала недорогие">сначала недорогие</option>
             <option value="сначала дорогие">сначала дорогие</option>

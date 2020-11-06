@@ -60,10 +60,6 @@ img {
   height: auto;
 }
 
-p {
-  margin-bottom: 0px;
-}
-
 .link {
   text-decoration: none;
   color: var(--basic-white);
@@ -1001,6 +997,7 @@ legend {
 
 .slider-info {
   margin-top: -5px;
+  margin-bottom: 0;
   font-size: 14px;
   line-height: 16px;
   font-weight: 700;
@@ -1184,7 +1181,7 @@ legend {
 
 .features {
   width: 1146px;
-  height: 306px;
+  min-height: 306px;
   background-color: var(--basic-brown-main);
   background-image: url("../img/wafer-bg.png");
   background-repeat: no-repeat;
@@ -1214,6 +1211,10 @@ legend {
   font-size: 16px;
   line-height: 22px;
   padding: 0px 0px 0px 48px;
+}
+
+.features-item:nth-child(1) p {
+  margin-bottom: 0;
 }
 
 .features-item:nth-child(2) p {
@@ -1302,8 +1303,7 @@ legend {
   line-height: 22px;
   color: var(--basic-black);
   font-weight: 500;
-  margin-top: 18px;
-  margin-left: 20px;
+  margin: 18px 0 0 20px;
 }
 
 .news-aside-link {
@@ -1377,6 +1377,9 @@ legend {
   width: 100%;
   height: 100%;
   border: none;
+  background-image: url(../img/bg-map.png);
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .section-map-contacts {
@@ -1396,6 +1399,7 @@ legend {
   line-height: 20px;
   color: var(--basic-black);
   margin-top: -3px;
+  margin-bottom: 0;
 }
 
 .section-map-desc2 {
